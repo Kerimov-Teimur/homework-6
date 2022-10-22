@@ -601,6 +601,63 @@ address {
   background-color: var(--accent);
 }
 
+/* SUBSCRIPTION ========== */
+
+.subscription {
+  width: 570px;
+  height: 50px;
+  margin-left: 93px;
+}
+
+.subscription-title {
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+
+.subscription-field {
+  display: flex;
+  align-items: center;
+}
+
+.subscription-input {
+  display: inline-block;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: var(--footer-bcg-color);
+  color: var(--white-color);
+  outline: transparent;
+
+  padding: 15px 16px;
+}
+
+.subscription-input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-btn {
+  margin-left: 12px;
+  padding: 10px 28px 10px 28px;
+}
+
+.subscription-icon {
+  margin-left: 10px;
+}
+
 /* =================================PORTFOLIO*/
 
 /* ==================================CONTENT */
@@ -735,6 +792,8 @@ address {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
+  padding: 40px;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1);
@@ -764,15 +823,18 @@ address {
   justify-content: center;
 }
 
+.modal-btn:hover,
+.modal-btn:focus {
+  fill: var(--accent);
+}
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.modal-form {
-  padding: 40px;
-}
+/* MODAL FORM */
 
 .form {
   width: 448px;
@@ -788,14 +850,122 @@ address {
 }
 
 .form-field {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   margin-bottom: 10px;
+}
+
+.form-field:last-child {
+  margin-bottom: 0;
+}
+
+.form-field.checkbox {
+  margin-bottom: 30px;
 }
 
 .form-input {
   width: 100%;
   padding: 11px;
   margin: 0;
+  outline: transparent;
   border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding-left: 42px;
+}
+
+.form-input:focus {
+  border: 1px solid var(--accent);
+}
+
+.form-input:focus + .modal-icon {
+  fill: var(--accent);
+}
+
+.form-lable {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+}
+
+.form-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  outline: transparent;
+}
+
+.form-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-textarea:focus {
+  border: 1px solid var(--accent);
+}
+
+.modal-icon {
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  fill: var(--title-text-color);
+
+  top: 50%;
+  left: 12px;
+}
+
+.check-text {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primary-text-color);
+}
+
+.check-text .check-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  margin-right: 7px;
+  fill: transparent;
+}
+
+.form-check:checked + .check-text .check-meta {
+  background-color: var(--accent);
+  border-color: transparent;
+  fill: var(--white-color);
+}
+
+.check-desc {
+  position: relative;
+  color: var(--accent);
+  margin-left: 10px;
+}
+
+.check-desc::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid var(--accent);
+  top: 18px;
+  left: 0;
+}
+
+.form-btn {
+  margin: 0 auto;
+  padding: 10px 52px 10px 52px;
 }

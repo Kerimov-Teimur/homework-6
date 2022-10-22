@@ -477,6 +477,23 @@
             </li>
           </ul>
         </div>
+
+        <div class="subscription">
+          <p class="subscription-title">Підпишіться на розсилку</p>
+          <div class="subscription-field">
+            <input
+              type="email"
+              class="subscription-input"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="subscription-btn button">
+              Підписатися
+              <svg class="subscription-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- BACKDROP -->
@@ -488,33 +505,63 @@
           </svg>
         </button>
         <div class="modal-form">
-          <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+          <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
           <!-- name -->
           <form class="form">
             <div class="form-field">
               <label for="name" class="form-lable">Ім'я</label>
               <input type="text" class="form-input" name="name" id="name" />
+              <svg class="modal-icon" width="12" height="12">
+                <use href="./images/sprite.svg#icon-modal-name"></use>
+              </svg>
             </div>
             <!-- phone -->
             <div class="form-field">
               <label for="tel" class="form-lable">Телефон</label>
               <input type="tel" class="form-input" name="tel" id="tel" />
+              <svg class="modal-icon" width="13" height="13">
+                <use href="./images/sprite.svg#icon-modal-phone"></use>
+              </svg>
             </div>
             <!-- mail -->
             <div class="form-field">
               <label for="mail" class="form-lable">Пошта</label>
               <input type="email" class="form-input" name="mail" id="mail" />
+              <svg class="modal-icon" width="15" height="12">
+                <use href="./images/sprite.svg#icon-modal-mail"></use>
+              </svg>
             </div>
             <!-- comment -->
             <div class="form-field">
-              <label for="comment">Коментар</label>
+              <label for="comment" class="form-lable">Коментар</label>
               <textarea
+                class="form-textarea"
                 name="comment"
                 id="comment"
-                rows="10"
                 placeholder="Введіть текст"
               ></textarea>
             </div>
+            <!-- chekbox -->
+            <div class="form-field checkbox">
+              <input
+                type="checkbox"
+                class="form-check visually-hidden"
+                name="privacy"
+                value="true"
+                id="privacy"
+              />
+              <label for="privacy" class="check-text">
+                <span class="check-meta">
+                  <svg class="check-icon" width="16" height="15">
+                    <use href="./images/sprite.svg#icon-check"></use>
+                  </svg>
+                </span>
+                Погоджуюся з розсилкою та приймаю
+                <span class="check-desc"> Умови договору</span>
+              </label>
+            </div>
+            <!-- button -->
+            <button type="submit" class="form-btn button">Відправити</button>
           </form>
         </div>
       </div>
