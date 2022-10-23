@@ -652,10 +652,24 @@ address {
 .subscription-btn {
   margin-left: 12px;
   padding: 10px 28px 10px 28px;
+
+  transition: color 250ms var(--cubik);
+}
+
+.subscription-btn:hover,
+.subscription-btn:focus {
+  color: var(--title-text-color);
+}
+
+.subscription-btn:hover .subscription-icon,
+.subscription-btn:focus .subscription-icon {
+  fill: var(--title-text-color);
 }
 
 .subscription-icon {
   margin-left: 10px;
+  fill: var(--white-color);
+  transition: fill 250ms var(--cubik);
 }
 
 /* =================================PORTFOLIO*/
@@ -805,27 +819,30 @@ address {
 }
 
 .modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: absolute;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: transparent;
   fill: var(--black-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 6px 6px;
   cursor: pointer;
+  outline: transparent;
 
   top: 8px;
   right: 8px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: fill 250ms var(--cubik), border 250ms var(--cubik);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   fill: var(--accent);
+  border: 1px solid var(--accent);
 }
 
 .is-hidden {
@@ -870,6 +887,7 @@ address {
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   padding-left: 42px;
+  transition: border 250ms var(--cubik);
 }
 
 .form-input:focus {
@@ -921,6 +939,7 @@ address {
 
   top: 50%;
   left: 12px;
+  transition: fill 250ms var(--cubik);
 }
 
 .check-text {
@@ -942,12 +961,18 @@ address {
   border-radius: 2px;
   margin-right: 7px;
   fill: transparent;
+  transition: background-color 250ms var(--cubik), fill 250ms var(--cubik),
+    border-color 250ms var(--cubik);
 }
 
 .form-check:checked + .check-text .check-meta {
   background-color: var(--accent);
   border-color: transparent;
   fill: var(--white-color);
+}
+
+.form-check:focus + .check-text .check-meta {
+  border-color: var(--accent);
 }
 
 .check-desc {
@@ -968,4 +993,10 @@ address {
 .form-btn {
   margin: 0 auto;
   padding: 10px 52px 10px 52px;
+  transition: color 250ms var(--cubik);
+}
+
+.form-btn:hover,
+.form-btn:focus {
+  color: var(--title-text-color);
 }
