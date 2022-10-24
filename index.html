@@ -481,19 +481,21 @@
 
         <div class="subscription">
           <p class="subscription-title">Підпишіться на розсилку</p>
-          <div class="subscription-field">
-            <input
-              type="email"
-              class="subscription-input"
-              placeholder="E-mail"
-            />
-            <button type="submit" class="subscription-btn button">
-              Підписатися
-              <svg class="subscription-icon" width="24" height="24">
-                <use href="./images/sprite.svg#icon-telegram"></use>
-              </svg>
-            </button>
-          </div>
+          <form>
+            <div class="subscription-field">
+              <input
+                type="email"
+                class="subscription-input"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="subscription-btn button">
+                Підписатися
+                <svg class="subscription-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-telegram"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </footer>
@@ -533,7 +535,7 @@
               </svg>
             </div>
             <!-- comment -->
-            <div class="form-field">
+            <div class="form-field form-comment">
               <label for="comment" class="form-lable">Коментар</label>
               <textarea
                 class="form-textarea"
