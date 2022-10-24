@@ -931,6 +931,7 @@ address {
 
 .modal-icon {
   display: inline-block;
+  align-items: center;
   position: absolute;
   width: 18px;
   height: 18px;
